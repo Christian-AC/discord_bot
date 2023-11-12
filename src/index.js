@@ -1,6 +1,9 @@
 require("dotenv").config();
 const { Client, IntentsBitField } = require('discord.js')
 
+
+//run 'nodemon' in console
+
 const client = new Client({
     intents: [
         IntentsBitField.Flags.Guilds,
@@ -20,9 +23,19 @@ client.on('messageCreate', (message) => {
         return
     }
 
-    if (message.content === 'hello') {
+    if (message.content.toLowerCase() === 'hello') {
         message.reply('Hi! hows it going?')
     }
+})
+
+//Bot interactions with '/' in discord 
+client.on('interactionCreate', (interaction) => {
+    if (!interaction.isChatInputCommand()) return;
+
+    if(interaction.commandName === 'hey'){
+        interaction.reply('hey')
+    }
+
 })
 
 
