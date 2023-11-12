@@ -15,6 +15,11 @@ client.on('ready', (c) => {
 })
 
 client.on('messageCreate', (message) => {
+    //Stops bot from replying to itself if hello
+    if(message.author.bot) {
+        return
+    }
+
     if (message.content === 'hello') {
         message.reply('Hi! hows it going?')
     }
