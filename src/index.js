@@ -32,14 +32,15 @@ client.on('messageCreate', (message) => {
 client.on('interactionCreate', (interaction) => {
     if (!interaction.isChatInputCommand()) return;
 
-    if(interaction.commandName === 'github'){
+    if(interaction.commandName === 'ping'){
         interaction.reply('https://github.com/Christian-AC')
     }
     if(interaction.commandName === 'hey'){
         interaction.reply('HEY!')
     }
-
-
+    if(interaction.commandName === 'github'){
+        interaction.reply('https://github.com/Christian-AC')
+    }
 })
 
 

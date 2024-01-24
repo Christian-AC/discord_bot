@@ -18,7 +18,7 @@ const commands = [
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
-
+// When making new commands run "node src/register-commands.js" in terminal
 (async () => {
     try {
         console.log("Registering commands")
