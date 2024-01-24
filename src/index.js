@@ -14,7 +14,7 @@ const client = new Client({
 })
 
 client.on('ready', (c) => {
-    console.log("I'm ready")
+    console.log("I'm online")
 })
 
 client.on('messageCreate', (message) => {
@@ -28,7 +28,7 @@ client.on('messageCreate', (message) => {
     }
 })
 
-//Bot interactions with '/' in discord 
+//Bot interactions with '/' in discord
 client.on('interactionCreate', (interaction) => {
     if (!interaction.isChatInputCommand()) return;
 
